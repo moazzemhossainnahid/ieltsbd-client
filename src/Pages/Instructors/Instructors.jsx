@@ -94,12 +94,6 @@ const Instructors = () => {
             </div>
           </div>
         </div>
-  
-        <div className="divider"></div>
-  
-        <div className="">
-            <AboutCounter/>
-        </div>
         
         <div className="divider"></div>
   
