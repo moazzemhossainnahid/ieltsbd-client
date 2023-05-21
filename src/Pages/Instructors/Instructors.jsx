@@ -10,7 +10,7 @@ const Instructors = () => {
 
     const instructors = useInstructors();
 
-    console.log(instructors);
+    // console.log(instructors);
   
     const navigate = useNavigate();
 

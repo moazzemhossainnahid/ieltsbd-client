@@ -9,7 +9,7 @@ const InstructorDetails = () => {
   
     const instructor = instructors && instructors?.find(ins => ins?._id === Number(id));
   
-    console.log(instructor);
+    // console.log(instructor);
   
     return (
         <div>
@@ -21,10 +21,7 @@ const InstructorDetails = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 bg-white gap-y-6 md:gap-x-8 px-3 md:px-0 container mx-auto mb-10">
           <div className="rounded shadow-md h-full border-gray-400 p-5 md:p-8 mx-auto md:col-span-1">
             <div>
-              <img
-                src={(instructor?.sex === "male" && "https://i.ibb.co/TLqKPLH/1024px-Male-Doctor-Flat-Icon-Vector-svg.png") || (instructor?.sex === "female" && "https://i.ibb.co/09LdpB6/6620101.png")} 
-                alt="Dr. Sarah Taylor"
-              />
+            {instructor?.img === "" ? <img className="h-60 md:h-80" src={`${instructor?.gender === "male" && "https://cdn.vectorstock.com/i/preview-1x/53/16/white-phone-monitor-with-teacher-or-tutor-vector-38115316.jpg" || instructor?.gender === "female" && "https://cdn.vectorstock.com/i/preview-1x/53/14/white-phone-monitor-with-cute-smiling-teacher-vector-38115314.jpg"}`} alt="Shoes" /> : <img className="h-60 md:h-80" src={instructor?.img} alt="Shoes" />}
             </div>
             <div className="my-6 md:my-8">
               <h1 className="text-2xl md:text-4xl text-center md:text-left font-medium text-primary opacity-80">
@@ -44,23 +41,23 @@ const InstructorDetails = () => {
                   src="https://img.icons8.com/ios/452/phone.png"
                   alt=""
                 />
-                <p className="text-lg font-medium">{instructor?.chamberPhone}</p>
+                <p className="text-lg font-medium">{instructor?.phone}</p>
               </div>
-              {/* <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                 <img
                   className="w-6 h-6"
                   src="https://img.icons8.com/ios/452/new-post.png"
                   alt=""
                 />
-                <p className="text-lg font-medium">drsarah@gmail.com</p>
-              </div> */}
+                <p className="text-lg font-medium">{instructor?.email}</p>
+              </div>
               <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                 <img
                   className="w-6 h-6"
                   src="https://img.icons8.com/ios/452/marker--v1.png"
                   alt=""
                 />
-                <p className="text-lg font-medium">{instructor?.location}</p>
+                <p className="text-lg font-medium">{instructor?.address}</p>
               </div>
   
             </div>
