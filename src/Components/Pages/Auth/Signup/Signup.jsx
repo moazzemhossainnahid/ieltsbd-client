@@ -58,8 +58,8 @@ const Signup = () => {
 
 
   return (
-    <div className="w-full bg-slate-300 py-10">
-      <div className="w-5/6 md:w-2/4 bg-white mx-auto text-center rounded">
+    <div className="w-full bg-white py-10">
+      <div className="w-5/6 md:w-2/5 bg-slate-300 mx-auto text-center rounded">
         <h2 className="font-bold text-black text-2xl py-5">Create Account</h2>
         {/* <div className="py-5">
           <div className="py-5 w-4/5 md:w-2/5 mx-auto">

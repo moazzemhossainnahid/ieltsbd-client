@@ -13,7 +13,7 @@ import Loading from '../../../Others/Loading/Loading';
 import UseToken from '../../../../Hooks/useToken';
 
 const Signin = () => {
-  const [signInWithEmailAndPassword, suser, sloading, serror] = useSignInWithEmailAndPassword(authth);
+  const [signInWithEmailAndPassword, suser, sloading, serror] = useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
@@ -79,8 +79,8 @@ const Signin = () => {
 
 
   return (
-    <div className="w-full bg-slate-300 py-10 ">
-      <div className="w-5/6 md:w-2/4 mx-auto bg-white text-center rounded">
+    <div className="w-full bg-white py-10 ">
+      <div className="w-5/6 md:w-2/5 mx-auto bg-slate-300 text-center rounded">
         <h2 className="font-bold text-black text-2xl py-5">Sign In</h2>
         {/* start some error message  */}
         {
@@ -94,7 +94,7 @@ const Signin = () => {
         }
         {/* end  */}
 
-        <div className="py-5 w-4/5 md:w-2/5 mx-auto">
+        <div className="py-5 w-4/5 md:w-3/5 mx-auto">
           <div
             onClick={handleGoogleSignin}
             className="flex items-center justify-center border rounded py-2 my-2 cursor-pointer hover:bg-gray-300"
