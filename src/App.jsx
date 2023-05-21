@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import AboutUS from './Pages/AboutUS/AboutUS';
 import ContactUS from './Pages/ContactUS/ContactUS';
 import Home from './Pages/Home/Home';
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className="App pt-20">
+      <div className="App pt-20 overflow-hidden">
         <Header />
         {/* {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/approveposts' && window.location.pathname !== '/cpanel/unapproveposts') && <Header />} */}
         <Routes>
