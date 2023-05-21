@@ -7,7 +7,7 @@ const useProfile = () => {
     const [profile, setProfile] = useState([]);
     const email = user?.email;
 
-    useEffect(() => {
+    useEffect(() => { 
         fetch(`http://localhost:5000/api/v1/users/${email}`)
             .then(res => res.json())
             .then(data => setProfile(data))

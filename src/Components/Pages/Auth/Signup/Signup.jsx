@@ -2,11 +2,11 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
-import auth from "../../../../firebase.init";
 import { useForm } from "react-hook-form";
-import Loading from "../../Others/Loading"; 
 import { toast } from "react-toastify";
 import { sendEmailVerification } from "firebase/auth";
+import Loading from "../../../Others/Loading/Loading";
+import auth from "../../../../../firebase.init";
 
 const Signup = () => {
   const [createUserWithEmailAndPassword, cuser, cloading, cerror] = useCreateUserWithEmailAndPassword(auth);

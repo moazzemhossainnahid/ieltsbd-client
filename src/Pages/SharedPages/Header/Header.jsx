@@ -3,8 +3,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { AiOutlineBars, AiOutlineClose } from "react-icons/ai";
 import Authentication from './Authentication';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import UseAdmin from '../../../Hooks/useAdmin';
 import auth from '../../../../firebase.init';
+import UseAdmin from '../../../Hooks/useAdmin';
 
 
 const Header = () => {
@@ -47,7 +47,7 @@ const Header = () => {
                         (user && admin) && <li className='md:ml-8 text-md capitalize md:my-0 my-5'><NavLink reloadDocument className={({ isActive }) => (isActive ? 'text-[#0f52ba] duration-300 border-b-2 border-[#0f52ba]' : 'text-gray-800 duration-100')} to="/cpanel">Control Panel</NavLink></li>
                     }
                     {
-                        user ? <div className="pl-5"><Authentication /></div> : <div className="" onClick={() => navigate('/signin')}><button className='btn px-5 py-2 rounded bg-primary text-white'>SignIn</button></div>
+                        user ? <div className="pl-5"><Authentication /></div> : <div className="md:pl-5" onClick={() => navigate('/signin')}><button className='btn px-5 py-2 rounded bg-primary text-white'>SignIn</button></div>
                     }
 
                 </ul>

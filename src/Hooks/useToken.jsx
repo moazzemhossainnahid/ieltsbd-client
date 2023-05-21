@@ -9,7 +9,7 @@ const UseToken = () => {
     useEffect(() => {
         const email = user?.email;
         const displayName = user?.displayName;
-
+ 
         const currentUser = {
             displayName: displayName,
             email: email

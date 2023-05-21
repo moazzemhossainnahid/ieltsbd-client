@@ -2,8 +2,8 @@ import { toast } from 'react-toastify';
 
 import { Link, useNavigate } from 'react-router-dom';
 
-import { signOut } from 'firebase/auth';
 import auth from '../../../../firebase.init';
+import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 

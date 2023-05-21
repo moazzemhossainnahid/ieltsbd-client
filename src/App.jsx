@@ -11,6 +11,8 @@ import Header from './Pages/SharedPages/Header/Header';
 import NotFound from './Pages/NotFound/NotFound';
 import Signin from './Components/Pages/Auth/Signin/Signin';
 import Signup from './Components/Pages/Auth/Signup/Signup';
+import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
+import Profile from './Pages/Dashboard/UserDashboard/Profile/Profile';
 
 function App() {
 
