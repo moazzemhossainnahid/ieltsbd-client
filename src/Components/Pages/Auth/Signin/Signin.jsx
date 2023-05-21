@@ -3,13 +3,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Signin.css';
 
 import google from '../../../assets/Google-Logo.png';
-
+ 
 import { toast } from 'react-toastify';
 import Loading from '../../Others/Loading';
 import { useForm } from 'react-hook-form';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
-import { GiCancel } from "react-icons/gi";
+import { GiCancel } from "react-icons/gi"; 
 import UseToken from '../../../Hooks/useToken';
 
 const Signin = () => {
