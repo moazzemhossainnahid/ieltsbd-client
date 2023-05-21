@@ -278,7 +278,7 @@
         "gender": "female",
         "img": "",
         "professionLevel": "Expert",
-        "teacherCategory": "best",
+        "teacherCategory": "normal",
         "totalTechingExp": 7.0,
         "techingType": "offline",
         "specialist":"listening",

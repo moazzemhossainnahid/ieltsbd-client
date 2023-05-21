@@ -15,7 +15,7 @@ const Instructors = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full mx-auto py-20 text-slate-800">
+        <div className="w-full mx-auto p-5 py-20 text-slate-800">
         <div className="text-center mb-20">
           <div>
             <h1 className="te mb-5 text-4xl md:text-5xl font-bold">
@@ -99,7 +99,7 @@ const Instructors = () => {
   
         {/* <InstructorCarousel /> */}
   
-        <div className="mt-28 ml-10">
+        <div className="mt-28 p-5">
           <div className="flex flex-col items-center ">
             <h3 className="text-4xl md:text-5xl font-bold text-left ">
               Meet Professionals
@@ -116,9 +116,9 @@ const Instructors = () => {
             </div>
           </div>
   
-          <div className="grid md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 sm:gap-16 md:gap-8 my-12 mt-20 ">
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-10 md:gap-5 py-12 px-7">
             {instructors.map((instructor) => {
-              if (instructor.teacherCategory == "normal") {
+              if (instructor.teacherCategory === "normal") {
                 return <GeneralTeacher instructor={instructor}></GeneralTeacher>;
               }
             })}
