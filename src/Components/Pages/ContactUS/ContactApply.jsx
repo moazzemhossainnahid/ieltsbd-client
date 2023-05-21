@@ -7,7 +7,7 @@ import Animation from '../../Others/Animation/Animation';
 const ContactApply = () => {   
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-28 lg:mx-44 my-24 mx-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-28 items-center lg:mx-44 my-24 mx-6'>
             <div className='text-left'>
                 <h2 className=' text-4xl font-bold my-4'>Get in touch</h2>
                 <Animation/>
@@ -24,17 +24,9 @@ const ContactApply = () => {
                 backgroundImage: "url(https://academist.qodeinteractive.com/wp-content/uploads/2018/07/Form-background-img.jpg)"
             }} className=' bg-cover bg-no-repeat'>
 
-                <h2 className=' text-4xl font-bold '>Apply now</h2>
-
-                <form className='pt-20'>
-                    <input className=' block w-full h-10 pl-2 border-b-2 border-[#d8dada] my-5' type="text" name="" id="" placeholder="Your Name" />
-
-                    <input className=' block w-full h-10 pl-2 border-b-2 border-[#d8dada] mb-5' type="email" name="" id="" placeholder="Email address" />
-
-                    <input className=' block w-full h-10 pl-2 border-b-2 border-[#d8dada] mb-5' type="number" name="" id="" placeholder="Phone number" />
-
-                    <input className=' block h-10 px-7 bg-[#015abd] text-white uppercase mb-4 mt-8' type="submit" value="Send now" />
-                </form>
+                <div className="flex justify-center items-center">
+                    <img src="https://i.ibb.co/YLxNcM9/About-Us-Download-PNG-Image.png" alt="" className="w-full object-cover" />
+                </div>
             </div>
         </div>
     );
