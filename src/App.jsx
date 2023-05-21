@@ -13,6 +13,7 @@ import Signin from './Components/Pages/Auth/Signin/Signin';
 import Signup from './Components/Pages/Auth/Signup/Signup';
 import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
 import Profile from './Pages/Dashboard/UserDashboard/Profile/Profile';
+import BecomeInstructor from './Components/Pages/Instructors/BecomeInstructor';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/instructor/:id" element={<RequireAuth><InstructorDetails /></RequireAuth>} />
+          <Route path="/beinstructor" element={<RequireAuth><BecomeInstructor /></RequireAuth>} />
           <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/contactus" element={<ContactUS />} />
           <Route path="/signin" element={<Signin />} />

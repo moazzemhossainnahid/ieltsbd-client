@@ -154,7 +154,7 @@ const Instructors = () => {
             </p>
             <div className="card-actions">
               <button
-                onClick={() => navigate(`/becomeinstructor`)}
+                onClick={() => navigate(`/beinstructor`)}
                 className="btn btn-primary"
               >
                 Become an Instructor

@@ -1,20 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import svg1 from "../../Assets/Images/svg1.png";
-import svg2 from "../../Assets/Images/svg2.png";
-import svg3 from "../../Assets/Images/svg3.png";
+import svg1 from "../../../assets/svg1.png";
+import svg2 from "../../../assets/svg2.png";
+import svg3 from "../../../assets/svg3.png";
 
 const BecomeInstructor = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div className=" w-full mx-auto py-20 text-slate-800 mb-20 ">
+    <div className=" w-full mx-auto py-20 text-slate-800 mb-20 p-5 ">
       <div className="text-center mb-20">
         <div>
           <h1 className=" mb-5 text-4xl md:text-5xl font-bold">
-            The Best Tutors
+            Become an Instructor
           </h1>
-          <p className="mb-5 text-2xl lg:w-[820px] mx-auto">
+          <p className="mb-5 text-xl lg:w-[820px] mx-auto text-center">
             Proin ac lobortis arcu, a vestibulum augue. Vivamus ipsum neque,
             facilisis vel mollis vitae, mollis nec ante. Quisque aliquam dictum
             condim.
@@ -124,7 +124,7 @@ const BecomeInstructor = () => {
         style={{
           backgroundImage:
             "url(https://academist.qodeinteractive.com/wp-content/uploads/2018/07/become-a-teacher-slider.jpg)",
-          height: "420px",
+          height: "550px",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}

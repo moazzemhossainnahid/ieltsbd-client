@@ -5,7 +5,7 @@ import LimitedLearningBanner from '../../Components/Pages/Home/LimitedLearningBa
 
 const Home = () => {
     return (
-        <div className='w-full'>
+        <div className='w-full overflow-x-hidden'>
              <Banner/>
              <UpcomingEvent/>
              <LimitedLearningBanner/>
