@@ -26,6 +26,9 @@ const BestInstructor = ({ instructor }) => {
             <FaInstagram />
           </a>
         </div>
+        <div className="pt-3">
+          <button onClick={() => navigate(`/instructor/${_id}`)} className="btn btn-sm btn-outline">View Details</button>
+        </div>
       </div>
     </div>
   );
