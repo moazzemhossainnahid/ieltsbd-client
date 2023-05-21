@@ -1,200 +1,130 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useInstructors from '../../../Hooks/useInstructors';
+import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
 
 const InstructorDetails = () => {
 
     const { id } = useParams();
     const instructors = useInstructors();
-  
+
     const instructor = instructors && instructors?.find(ins => ins?._id === Number(id));
-  
+
     // console.log(instructor);
-  
+
     return (
         <div>
-        <div className="bg-primary opacity-80 py-8 md:py-12 mb-8 md:mb-12">
-          <h1 className="text-4xl md:text-5xl px-5 font-medium text-white">
-            Instructor Profile
-          </h1>
+            <div className="bg-primary opacity-80 py-8 md:py-12 mb-8 md:mb-12">
+                <h1 className="text-4xl md:text-5xl px-5 font-medium text-white">
+                    Instructor Profile
+                </h1>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 bg-white gap-y-6 md:gap-x-8 px-3 md:px-0 container mx-auto mb-10">
+                <div className="rounded shadow-md h-full border-gray-400 p-5 md:p-8 mx-auto md:col-span-1">
+                    <div className='w-full mx-auto flex justify-center'>
+                        {instructor?.img === "" ? <img className="h-60 md:h-80" src={`${instructor?.gender === "male" && "https://cdn.vectorstock.com/i/preview-1x/53/16/white-phone-monitor-with-teacher-or-tutor-vector-38115316.jpg" || instructor?.gender === "female" && "https://cdn.vectorstock.com/i/preview-1x/53/14/white-phone-monitor-with-cute-smiling-teacher-vector-38115314.jpg"}`} alt="Shoes" /> : <img className="h-60 md:h-80" src={instructor?.img} alt="Shoes" />}
+                    </div>
+                    <div className="my-6 md:my-8">
+                        <h1 className="text-2xl md:text-4xl text-center md:text-left font-medium text-primary opacity-80">
+                            {instructor?.name}
+                        </h1>
+                        <h4 className="text-sm md:text-md font-medium text-center md:text-left mt-2">
+                            {instructor?.title}
+                        </h4>
+                        <h5 className="text-base text-center md:text-left mt-2">
+                            {instructor?.organization}
+                        </h5>
+                    </div>
+                    <div className="my-6 md:my-8">
+                        <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                            <img
+                                className="w-6 h-6"
+                                src="https://img.icons8.com/ios/452/phone.png"
+                                alt=""
+                            />
+                            <p className="text-lg font-medium">{instructor?.phone}</p>
+                        </div>
+                        <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                            <img
+                                className="w-6 h-6"
+                                src="https://img.icons8.com/ios/452/new-post.png"
+                                alt=""
+                            />
+                            <p className="text-lg font-medium">{instructor?.email}</p>
+                        </div>
+                        <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                            <img
+                                className="w-6 h-6"
+                                src="https://img.icons8.com/ios/452/marker--v1.png"
+                                alt=""
+                            />
+                            <p className="text-lg font-medium">{instructor?.address}</p>
+                        </div>
+
+                    </div>
+                    <div class="divider"></div>
+
+                </div>
+
+                <div className="rounded shadow-md h-full md:col-span-2 p-5 md:p-8">
+                    <div className="mb-5">
+                        <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
+                            Biography
+                        </h3>
+                        <p className="text-justify text-base my-3">
+                            {instructor?.description}
+                        </p>
+                    </div>
+                    <div class="divider"></div>
+                    <div className="mb-5">
+                        <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
+                            Qualifications
+                        </h3>
+                        <div>
+                            {instructor?.education && instructor?.education?.map((e, idx) => (
+                                <div key={idx} className="">
+                                    <h3 className="text-3xl font-bold tracking-widest text-gray-600">{e?.title}</h3>
+                                    <p className="text-justify font-medium italic text-gray-400 text-base mb-3">{e?.shortTitle}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div className="mb-5">
+                        <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
+                            Others Informations
+                        </h3>
+                        <div className="w-full flex flex-col gap-3">
+                            <div className="space-y-4">
+                                <h3 className="text-2xl font-semibold text-gray-700">Sex: <span className="pl-2 font-normal text-xl">{instructor?.gender}</span></h3>
+                                <h3 className="text-2xl font-semibold text-gray-700">Profession Level: <span className="pl-2 font-normal text-xl">{instructor?.professionLevel}</span></h3>
+                                <h3 className="text-2xl font-semibold text-gray-700">Teching Experience: <span className="pl-2 font-normal text-xl">{instructor?.totalTechingExp} yrs.</span></h3>
+                                <h3 className="text-2xl font-semibold text-gray-700">Teching Type: <span className="pl-2 font-normal text-xl">{instructor?.techingType}</span></h3>
+                                <h3 className="text-2xl font-semibold text-gray-700">Speciality: <span className="pl-2 font-normal text-xl">{instructor?.specialist}</span></h3>
+                                <h3 className="text-2xl font-semibold text-gray-700">Fee Detsils: <span className="pl-2 font-bold text-3xl">{instructor?.feeDetails} <sub>/Month</sub> </span></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div className="mb-5">
+                        <h3 className="font-medium text-3xl md:text-left mb-5 text-primary opacity-80">
+                            Social Connectivity
+                        </h3>
+                        <div className="flex item-center justify-left md:justify-start">
+                            
+                            <div className="mr-10 space-y-4">
+                                <a href={instructor?.social_link?.facebook} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaFacebook className='text-blue-600' /> Facebook</a>
+                                <a href={instructor?.social_link?.twitter} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaTwitter className='text-sky-600' /> Twitter</a>
+                                <a href={instructor?.social_link?.pinterest} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaPinterest className='text-red-600' /> Pinterest</a>
+                                <a href={instructor?.social_link?.instagram} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaInstagram className='text-red-800' /> Instagram</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 bg-white gap-y-6 md:gap-x-8 px-3 md:px-0 container mx-auto mb-10">
-          <div className="rounded shadow-md h-full border-gray-400 p-5 md:p-8 mx-auto md:col-span-1">
-            <div>
-            {instructor?.img === "" ? <img className="h-60 md:h-80" src={`${instructor?.gender === "male" && "https://cdn.vectorstock.com/i/preview-1x/53/16/white-phone-monitor-with-teacher-or-tutor-vector-38115316.jpg" || instructor?.gender === "female" && "https://cdn.vectorstock.com/i/preview-1x/53/14/white-phone-monitor-with-cute-smiling-teacher-vector-38115314.jpg"}`} alt="Shoes" /> : <img className="h-60 md:h-80" src={instructor?.img} alt="Shoes" />}
-            </div>
-            <div className="my-6 md:my-8">
-              <h1 className="text-2xl md:text-4xl text-center md:text-left font-medium text-primary opacity-80">
-                {instructor?.name}
-              </h1>
-              <h4 className="text-sm md:text-md font-medium text-center md:text-left mt-2">
-                {instructor?.title}
-              </h4>
-              <h5 className="text-base text-center md:text-left mt-2">
-                {instructor?.organization}
-              </h5>
-            </div>
-            <div className="my-6 md:my-8">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <img
-                  className="w-6 h-6"
-                  src="https://img.icons8.com/ios/452/phone.png"
-                  alt=""
-                />
-                <p className="text-lg font-medium">{instructor?.phone}</p>
-              </div>
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <img
-                  className="w-6 h-6"
-                  src="https://img.icons8.com/ios/452/new-post.png"
-                  alt=""
-                />
-                <p className="text-lg font-medium">{instructor?.email}</p>
-              </div>
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <img
-                  className="w-6 h-6"
-                  src="https://img.icons8.com/ios/452/marker--v1.png"
-                  alt=""
-                />
-                <p className="text-lg font-medium">{instructor?.address}</p>
-              </div>
-  
-            </div>
-            <div class="divider"></div>
-  
-          </div>
-  
-          <div className="rounded shadow-md h-full md:col-span-2 p-5 md:p-8">
-            <div className="mb-5">
-              <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
-                Biography
-              </h3>
-              <p className="text-justify text-base my-3">
-                {instructor?.desc}
-              </p>
-            </div>
-            <div class="divider"></div>
-            <div className="mb-5">
-              <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
-                Qualifications
-              </h3>
-              <div>
-                {instructor?.qualifications && instructor?.qualifications?.map(q => (
-                  <p className="text-justify font-medium text-base mb-3">
-                    ● {q}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div className="mb-5">
-              <h3 className="font-medium text-3xl text-center md:text-left mb-5">
-                Expertise
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4">
-                <div className="flex flex-col md:flex-row items-center py-5 md:p-5">
-                  <img
-                    className="w-16 h-16 mb-5 md:mb-0 md:mr-6"
-                    src="https://img.icons8.com/ios/452/medical-heart.png"
-                    alt=""
-                  />
-                  <div>
-                    <h4 className="text-2xl font-medium mb-3 text-center md:text-left text-primary opacity-80">
-                      Heart Specialist
-                    </h4>
-                    <p className="text-justify text-sm">
-                      Sirius WordPress Theme features a slick and clean design
-                      that is suitable for virtually any type of website
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row items-center py-5 md:p-5">
-                  <img
-                    className="w-16 h-16 mb-5 md:mb-0 md:mr-6"
-                    src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/452/external-kidneys-anatomy-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
-                    alt=""
-                  />
-                  <div>
-                    <h4 className="text-2xl font-medium mb-3 text-center md:text-left text-primary opacity-80">
-                      Kidney Specialist
-                    </h4>
-                    <p className="text-justify text-sm">
-                      Sirius WordPress Theme features a slick and clean design
-                      that is suitable for virtually any type of website
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row items-center py-5 md:p-5">
-                  <img
-                    className="w-16 h-16 mb-5 md:mb-0 md:mr-6"
-                    src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/452/external-kidneys-anatomy-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
-                    alt=""
-                  />
-                  <div>
-                    <h4 className="text-2xl font-medium mb-3 text-center md:text-left text-primary opacity-80">
-                      Kidney Specialist
-                    </h4>
-                    <p className="text-justify text-sm">
-                      Sirius WordPress Theme features a slick and clean design
-                      that is suitable for virtually any type of website
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row items-center py-5 md:p-5">
-                  <img
-                    className="w-16 h-16 mb-5 md:mb-0 md:mr-6"
-                    src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/452/external-kidneys-anatomy-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
-                    alt=""
-                  />
-                  <div>
-                    <h4 className="text-2xl font-medium mb-3 text-center md:text-left text-primary opacity-80">
-                      Kidney Specialist
-                    </h4>
-                    <p className="text-justify text-sm">
-                      Sirius WordPress Theme features a slick and clean design
-                      that is suitable for virtually any type of website
-                    </p>
-                  </div>
-                </div>
-  
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div className="mb-5">
-              <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
-                Working Hours
-              </h3>
-              <div className="flex item-center justify-center md:justify-start">
-                <div className="mr-10">
-                  <p className="text-justify font-medium text-base mb-3">Mon</p>
-                  <p className="text-justify font-medium text-base mb-3">Tue</p>
-                  <p className="text-justify font-medium text-base mb-3">Wed</p>
-                  <p className="text-justify font-medium text-base mb-3">Thu</p>
-                  <p className="text-justify font-medium text-base mb-3">Fri</p>
-                </div>
-                <div>
-                  <p className="text-justify font-medium text-base mb-3">
-                    09:00 - 18:00
-                  </p>
-                  <p className="text-justify font-medium text-base mb-3">
-                    09:00 - 18:00
-                  </p>
-                  <p className="text-justify font-medium text-base mb-3">
-                    09:00 - 18:00
-                  </p>
-                  <p className="text-justify font-medium text-base mb-3">
-                    09:00 - 18:00
-                  </p>
-                  <p className="text-justify font-medium text-base mb-3">
-                    09:00 - 18:00
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     );
 };
 
