@@ -4,7 +4,7 @@ const useInstructors = () => {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    fetch("/instructors.json")
+    fetch("/newinstructors.json")
       .then((res) => res.json())
       .then((data) => setInstructors(data));
   }, []);
