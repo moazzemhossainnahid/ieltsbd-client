@@ -1,7 +1,12 @@
+import { ToastContainer } from 'react-toastify'
 import './App.css'
 import AboutUS from './Pages/AboutUS/AboutUS'
 import ContactUS from './Pages/ContactUS/ContactUS'
 import Home from './Pages/Home/Home'
+import InstructorDetails from './Pages/Instructors/InstructorDetails/InstructorDetails'
+import Instructors from './Pages/Instructors/Instructors'
+import Footer from './Pages/SharedPages/Footer/Footer'
+import Header from './Pages/SharedPages/Header/Header'
 
 function App() {
 
@@ -12,7 +17,8 @@ function App() {
         {/* {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/approveposts' && window.location.pathname !== '/cpanel/unapproveposts') && <Header />} */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/post/:id' element={<RequireAuth><SinglePost/></RequireAuth>} />
+          <Route path="/instructors" element={<Instructors />} />
+          <Route path="/instructor/:id" element={<InstructorDetails />} />
           <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/contactus" element={<ContactUS />} />
           <Route path="/signin" element={<Signin />} />
