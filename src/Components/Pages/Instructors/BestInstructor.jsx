@@ -1,8 +1,11 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const BestInstructor = ({ instructor }) => {
-  const { name, img, profession, social_link, dec } = instructor;
+  const { name, img, profession, social_link, dec, _id } = instructor;
+  const navigate = useNavigate();
+
   return (
     <div data-aos="fade-up" class="card w-96 m-auto shadow-lg">
       <figure>

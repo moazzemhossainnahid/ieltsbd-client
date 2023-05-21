@@ -11,10 +11,10 @@
         "professionLevel": "Expert",
         "teacherCategory":"best",
         "status": "active",
-        "social_link":{"facebook":"https://www.facebook.com/abdurrazzakhera",
-                        "twitter":"https://twitter.com/abdurrazzakhera",
-                        "pinterest":"https://www.pinterest.com/hhera92929/",
-                        "instagram":"https://www.instagram.com/abdurrazzakhera/"
+        "social_link":{"facebook":"https://www.facebook.com/",
+                        "twitter":"https://twitter.com/",
+                        "pinterest":"https://www.pinterest.com/",
+                        "instagram":"https://www.instagram.com/"
                         },
         "createdAt": "2022-11-10T01:20:17.185Z",
         "updatedAt": "2022-11-10T01:20:17.185Z"

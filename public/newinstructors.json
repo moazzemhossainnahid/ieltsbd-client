@@ -1,0 +1,300 @@
+[
+    {
+        "_id": 1,
+        "name": "Moazzem Nahid",
+        "title": "IELTS-English Writing",
+        "email": "moazzemnahid@gmail.com",
+        "phone": "+8801636090316",
+        "description": "Donec iaculis mi eget tempus lobortis. Maecenas vitae velit neque. Pellentesque suscipit facilisis sapien. Suspen auctor…",
+        "gender": "male",
+        "img": "https://lh3.googleusercontent.com/ogw/AOLn63GL7_KqSXGDDIJaP7Kc5e6ZYPjKqG5ys8huJYK-mQ=s64-c-mo",
+        "professionLevel": "Expert",
+        "teacherCategory": "best",
+        "totalTechingExp": 5.0,
+        "techingType": "online",
+        "specialist":"written",
+        "address": "5/9 Gazipur, Dhaka 1723, Bangladesh",
+        "education": [
+            {
+                "title": "Barrister",
+                "shortTitle": "(Sep, 2020–now) from UWE, UK"
+            },
+            {
+                "title": "Llb ",
+                "shortTitle": "(Apr, 2017–Nov, 2019) from University of london, UK"
+            }
+        ],
+        "feeDetails": 20000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 2,
+        "name": "Sweety Ahmed",
+        "title": "IELTS-English Speaking",
+        "email": "sweety54@gmail.com",
+        "phone": "+8801636094516",
+        "description": "Donec iaculis mi eget tempus lobortis. Maecenas vitae velit neque. Pellentesque suscipit facilisis sapien. Suspen auctor…",
+        "gender": "female",
+        "img": "https://userphotos2.teacheron.com/1602763-17619.jpeg",
+        "professionLevel": "Expert",
+        "teacherCategory": "best",
+        "totalTechingExp": 3.0,
+        "techingType": "online",
+        "specialist":"speaking",
+        "address": "5 Dhanmondi Lake Rd, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "Barrister",
+                "shortTitle": "(Sep, 2020–now) from UWE, UK"
+            },
+            {
+                "title": "Llb ",
+                "shortTitle": "(Apr, 2017–Nov, 2019) from University of london, UK"
+            }
+        ],
+        "feeDetails": 17000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 3,
+        "name": "MD. RAKIBUL ISLAM",
+        "title": "IELTS-English Reading",
+        "email": "rakibul987@gmail.com",
+        "phone": "+8801636090316",
+        "description": "Proficient in math, physics and chemistry. I am very friendly. My communication skill is top-notch. I can break down complicated things into simple states, making it easy for my students to understand the topics.",
+        "gender": "male",
+        "img": "https://lh3.googleusercontent.com/ogw/AOLn63GL7_KqSXGDDIJaP7Kc5e6ZYPjKqG5ys8huJYK-mQ=s64-c-mo",
+        "professionLevel": "Expert",
+        "teacherCategory": "normal",
+        "totalTechingExp": 2.0,
+        "techingType": "online",
+        "specialist":"reading",
+        "address": "mohakhali, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "B.Sc",
+                "shortTitle": "(Jan, 2016–Dec, 2021) from Shahjalal University of Science and Technology, Sylhet"
+            }
+        ],
+        "feeDetails": 15000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 4,
+        "name": "Rica Islam",
+        "title": "IELTS-English Listening",
+        "email": "rica001@gmail.com",
+        "phone": "+8801638990316",
+        "description": "As an IELTS Teacher and Cambridge O level instructor, being jointly responsible for the educational success of the IELTS students and Cambridge students appearing for O levels.",
+        "gender": "female",
+        "img": "",
+        "professionLevel": "Expert",
+        "teacherCategory": "best",
+        "totalTechingExp": 4.0,
+        "techingType": "online",
+        "specialist":"listening",
+        "address": "baridhara, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "Bachelor in computer science and entrepreneurship",
+                "shortTitle": "(Jan, 2020–Nov, 2022) from Binary University of Management and Entrepreneurship–scored 8"
+            }
+        ],
+        "feeDetails": 19000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 5,
+        "name": "Md. Nazmus Sakib Bin Alam",
+        "title": "IELTS-English Writing",
+        "email": "nsalam45@gmail.com",
+        "phone": "+8801680990316",
+        "description": "Teaching is something that I seriously consider as a noble job. There may be many teachers or trainers who evaluate students on the basis of assessment.",
+        "gender": "male",
+        "img": "https://userphotos2.teacheron.com/1399600-25071.jpg",
+        "professionLevel": "Expert",
+        "teacherCategory": "normal",
+        "totalTechingExp": 1.0,
+        "techingType": "online",
+        "specialist":"writing",
+        "address": "bashundhara, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "Bachelor of Science in EEE",
+                "shortTitle": "(Jan, 2014–Dec, 2018) from North South University, Dhaka–scored 3.82"
+            }
+        ],
+        "feeDetails": 12000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 6,
+        "name": "Nafisa",
+        "title": "IELTS-English Listening",
+        "email": "nafisa3322@gmail.com",
+        "phone": "+8801678990316",
+        "description": "I am Nafisa. I am an experienced tutor. I have taught English IGCSE for 5years both online and offline. Moreover, I have experience in teaching IELTS beginners and intermediate level students.",
+        "gender": "female",
+        "img": "https://userphotos2.teacheron.com/1254586-52506.jpg",
+        "professionLevel": "Intermediate",
+        "teacherCategory": "normal",
+        "totalTechingExp": 2.0,
+        "techingType": "online",
+        "specialist":"listening",
+        "address": "badda, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "Higher Secondary",
+                "shortTitle": "(Feb, 2013–now) from Nada International School Al Ahsa"
+            }
+        ],
+        "feeDetails": 9000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 7,
+        "name": "Md Zawadul Karim",
+        "title": "IELTS-English Writing",
+        "email": "zahidulk76@gmail.com",
+        "phone": "+8801609990316",
+        "description": "I believe that an interactive method of learning is the best approach. No matter how bland the subject might be, the student must have an active interest in actually learning the matter, which is where I come in.",
+        "gender": "male",
+        "img": "https://userphotos2.teacheron.com/1217863-02286.jpeg",
+        "professionLevel": "Intermediate",
+        "teacherCategory": "normal",
+        "totalTechingExp": 5.0,
+        "techingType": "online",
+        "specialist":"writing",
+        "address": "gulshan, Dhaka 1207, Bangladesh",
+        "education": [
+            {
+                "title": "B.A HONS",
+                "shortTitle": "(Apr, 2019–now) from University of Dhaka, Dhaka–scored 8.5"
+            }
+        ],
+        "feeDetails": 15000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 8,
+        "name": "Sadika Islam",
+        "title": "IELTS-English Reading",
+        "email": "nafisa3322@gmail.com",
+        "phone": "+8801678340316",
+        "description": "One thing I've come to realize in recent years is that English is a language used all over the world, and even then there are too many people who don't know the language.",
+        "gender": "female",
+        "img": "https://userphotos2.teacheron.com/1137386-02370.jpg",
+        "professionLevel": "Intermediate",
+        "teacherCategory": "normal",
+        "totalTechingExp": 6.0,
+        "techingType": "online",
+        "specialist":"reading",
+        "address": "banani, Dhaka 1212, Bangladesh",
+        "education": [
+            {
+                "title": "Bachelor of Pharmaceutical Sciences",
+                "shortTitle": "(Jan, 2013–now) from North South University, Dhaka"
+            }
+        ],
+        "feeDetails": 14000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 9,
+        "name": "Sheikh Sakura Mannan",
+        "title": "IELTS-English Writing",
+        "email": "sakuramannan@gmail.com",
+        "phone": "+8801673490316",
+        "description": "Hello, I have been teaching for IELTS and PTE Individually for quite a time; I got 9 in listening,7.5 in speaking,7 in writing, and 7 in reading on my last IELTS exam. I want those students who want to fix their basic English and achieve 6 to 8.5 in the IELTS exam.",
+        "gender": "female",
+        "img": "https://userphotos2.teacheron.com/904288-13190.jpg",
+        "professionLevel": "Expert",
+        "teacherCategory": "normal",
+        "totalTechingExp": 4.0,
+        "techingType": "online",
+        "specialist":"writing",
+        "address": "badda, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "BBA",
+                "shortTitle": "(Apr, 2022–now) from IELTS–scored 6.5"
+            }
+        ],
+        "feeDetails": 17000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    },
+    {
+        "_id": 10,
+        "name": "Proma Kanungoe",
+        "title": "IELTS-English Listening",
+        "email": "nafisa3322@gmail.com",
+        "phone": "+8801678999816",
+        "description": "Hello, I am Proma Kanungoe, Graduated From Vellore Institute of Technology. I am from Chittagong, and My Background was science. I would emphasize the numerous advantages of receiving tuition from me.",
+        "gender": "female",
+        "img": "",
+        "professionLevel": "Expert",
+        "teacherCategory": "best",
+        "totalTechingExp": 7.0,
+        "techingType": "offline",
+        "specialist":"listening",
+        "address": "badda, Dhaka 1209, Bangladesh",
+        "education": [
+            {
+                "title": "Ph.D",
+                "shortTitle": "(Aug, 2016–Dec, 2021) from West Virginia University, Morgan town, West virginia"
+            }
+        ],
+        "feeDetails": 22000,
+        "social_link": {
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "pinterest": "https://www.pinterest.com/",
+            "instagram": "https://www.instagram.com/"
+        }
+    }
+]
