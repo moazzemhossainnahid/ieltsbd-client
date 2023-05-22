@@ -28,9 +28,8 @@ const Instructors = () => {
             </p>
           </div>
         </div>
-        <div></div>
         {/* Best Instructor Page */}
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full mb-20">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 w-full mb-20">
           {instructors.map((instructor) => {
             if (instructor.teacherCategory === "best") {
               return <BestInstructor instructor={instructor}></BestInstructor>;

@@ -7,13 +7,13 @@ import { BannnerCardData, SliderData } from '../../../assets/Data/SliderData';
 const Banner = () => {
     return (
         <div className='w-full'>
-            <div className="w-full">
-                <Slider className="h-[65vh] md:h-[85vh] relative z-50 text-left w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
+            <div className="w-full relative">
+                <Slider className="h-[65vh] md:h-[85vh] relative text-left w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
                     {
                         SliderData?.map((data, idx) => {
                             return (
-                                <div key={idx} className={` w-full overflow-hidden h-[65vh] md:h-[85vh]`}>
-                                    <img src={data?.img} alt="" className=" h-[65vh] md:h-[85vh] w-full relative object-cover" />
+                                <div key={idx} className={`z-40 bg-gradient-to-l from-gray-900 to-primary w-full overflow-hidden h-[65vh] md:h-[85vh]`}>
+                                    <img src={data?.img} alt="" className=" h-[65vh] md:h-[85vh] w-full mix-blend-screen relative object-cover" />
                                     <div className="absolute top-16 left-7">
                                         <h3 data-aos="fade-up" data-aos-duration="1500" className="text-3xl md:text-6xl font-bold py-2 text-white">{data?.title}</h3>
                                         <p data-aos="fade-up" data-aos-duration="1700" className="text-white font-semibold py-2 text-xl">{data?.desc}</p>
@@ -24,7 +24,7 @@ const Banner = () => {
                         })
                     }
                 </Slider>
-                <div className=" w-5/6 mx-auto relative -mt-10 z-50 p-2 grid grid-cols-1 lg:grid-cols-3 gap-5 bg-base-100 rounded-md shadow-lg">
+                <div className="w-5/6 mx-auto relative -mt-10 z-50 p-2 grid grid-cols-1 lg:grid-cols-3 gap-5 bg-base-100 rounded-md shadow-lg">
                     {
                         BannnerCardData?.map((data, idx) => {
                             return (
