@@ -31,8 +31,8 @@ const Instructors = () => {
         <div></div>
         {/* Best Instructor Page */}
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full mb-20">
-          {instructors.slice(0,4).map((instructor) => {
-            if (instructor.teacherCategory == "best") {
+          {instructors.map((instructor) => {
+            if (instructor.teacherCategory === "best") {
               return <BestInstructor instructor={instructor}></BestInstructor>;
             }
           })}
