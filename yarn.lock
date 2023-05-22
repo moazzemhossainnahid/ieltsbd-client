@@ -102,7 +102,7 @@
     "@firebase/util" "1.9.3"
     "tslib" "^2.1.0"
 
-"@firebase/app-compat@0.2.10":
+"@firebase/app-compat@0.2.10", "@firebase/app-compat@0.x":
   "integrity" "sha512-kulrAW9JKkWeLeXKYjipCh60MmZcRC626NYpNWKxnjZ3YsVk6vgMuM+BHvhHQVp0fgfOq3hMNp5tyhlAB1Q1EQ=="
   "resolved" "https://registry.npmjs.org/@firebase/app-compat/-/app-compat-0.2.10.tgz"
   "version" "0.2.10"
@@ -113,12 +113,12 @@
     "@firebase/util" "1.9.3"
     "tslib" "^2.1.0"
 
-"@firebase/app-types@0.9.0":
+"@firebase/app-types@0.9.0", "@firebase/app-types@0.x":
   "integrity" "sha512-AeweANOIo0Mb8GiYm3xhTEBVCmPwTYAu9Hcd2qSkLuga/6+j9b1Jskl5bpiSQWy9eJ/j5pavxj6eYogmnuzm+Q=="
   "resolved" "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.9.0.tgz"
   "version" "0.9.0"
 
-"@firebase/app@0.9.10":
+"@firebase/app@0.9.10", "@firebase/app@0.x":
   "integrity" "sha512-2aLHuPLrjgxds95e2JpuAb29pBGArihHwjdJBUKtJnSxxEdwxAsGuXzSrOrmzYXlAwxUTZkOD6Cbl/dfTTwhKA=="
   "resolved" "https://registry.npmjs.org/@firebase/app/-/app-0.9.10.tgz"
   "version" "0.9.10"
@@ -403,7 +403,7 @@
     "node-fetch" "2.6.7"
     "tslib" "^2.1.0"
 
-"@firebase/util@1.9.3":
+"@firebase/util@1.9.3", "@firebase/util@1.x":
   "integrity" "sha512-DY02CRhOZwpzO36fHpuVysz6JZrscPiBXD0fXp6qSrL9oNOx5KWICKdR95C0lSITzxp0TZosVyHqzatE8JbcjA=="
   "resolved" "https://registry.npmjs.org/@firebase/util/-/util-1.9.3.tgz"
   "version" "1.9.3"
@@ -609,7 +609,7 @@
   "resolved" "https://registry.npmjs.org/@types/long/-/long-4.0.2.tgz"
   "version" "4.0.2"
 
-"@types/node@>=12.12.47", "@types/node@>=13.7.0":
+"@types/node@>= 14", "@types/node@>=12.12.47", "@types/node@>=13.7.0":
   "integrity" "sha512-DqJociPbZP1lbZ5SQPk4oag6W7AyaGMO6gSfRwq3PWl4PXTwJpRQJhDq4W0kzrg3w6tJ1SwlvGZ5uKFHY13LIg=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-20.2.1.tgz"
   "version" "20.2.1"
@@ -677,7 +677,7 @@
   "resolved" "https://registry.npmjs.org/arg/-/arg-5.0.2.tgz"
   "version" "5.0.2"
 
-"autoprefixer@^10.4.14":
+"autoprefixer@^10.0.2", "autoprefixer@^10.4.14":
   "integrity" "sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ=="
   "resolved" "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.14.tgz"
   "version" "10.4.14"
@@ -714,7 +714,7 @@
   dependencies:
     "fill-range" "^7.0.1"
 
-"browserslist@^4.21.5":
+"browserslist@^4.21.5", "browserslist@>= 4.21.0":
   "integrity" "sha512-tUkiguQGW7S3IhB7N+c2MV/HZPSCPAAiYBZXLsBhFB/PCy6ZKKsZrmBayHV9fdGV/ARIfJ14NkxKzRDjvp7L6w=="
   "resolved" "https://registry.npmjs.org/browserslist/-/browserslist-4.21.5.tgz"
   "version" "4.21.5"
@@ -943,7 +943,7 @@
   dependencies:
     "to-regex-range" "^5.0.1"
 
-"firebase@^9.22.0":
+"firebase@^9.22.0", "firebase@>= 9.0.0":
   "integrity" "sha512-Ay1u8IOfhPh58RFAHF7A9cKHACCgV6uI2bhkzKdkjnV0n2AAxn4tDtdXvJ3BEbfhF4WWBC2dFcEXH8cd14ptaw=="
   "resolved" "https://registry.npmjs.org/firebase/-/firebase-9.22.0.tgz"
   "version" "9.22.0"
@@ -1293,7 +1293,7 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.4.23":
+"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.1.6", "postcss@^8.2.14", "postcss@^8.4.21", "postcss@^8.4.23", "postcss@>=8.0.9":
   "integrity" "sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.23.tgz"
   "version" "8.4.23"
@@ -1362,7 +1362,7 @@
     "@rollup/plugin-babel" "^6.0.3"
     "countup.js" "^2.5.0"
 
-"react-dom@^18.2.0":
+"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.4.0", "react-dom@^18.2.0", "react-dom@>=16", "react-dom@>=16.8":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -1412,7 +1412,7 @@
   dependencies:
     "clsx" "^1.1.1"
 
-"react@^18.2.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.4.0", "react@^16.8.0 || ^17 || ^18", "react@^18.2.0", "react@>= 16.3.0", "react@>= 16.8.0", "react@>=16", "react@>=16.8":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -1452,7 +1452,7 @@
   "resolved" "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   "version" "1.0.4"
 
-"rollup@^3.21.0":
+"rollup@^1.20.0||^2.0.0||^3.0.0", "rollup@^3.21.0":
   "integrity" "sha512-imsigcWor5Y/dC0rz2q0bBt9PabcL3TORry2hAa6O6BuMvY71bqHyfReAz5qyAqiQATD1m70qdntqBfBQjVWpQ=="
   "resolved" "https://registry.npmjs.org/rollup/-/rollup-3.22.0.tgz"
   "version" "3.22.0"
@@ -1531,6 +1531,11 @@
   dependencies:
     "es6-object-assign" "^1.1.0"
     "promise-polyfill" "^6.0.2"
+
+"sweetalert2@^11.7.5":
+  "integrity" "sha512-RBPKdK8Uf9/bz9r4vy7x6sGqf0MioSXt1po1lAwwcl3AwbjHVTc5S0yud4ZJKU1EhvJFVDrFoqIpHwWERwZJEA=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.7.5.tgz"
+  "version" "11.7.5"
 
 "tailwindcss@^3", "tailwindcss@^3.3.2":
   "integrity" "sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w=="
@@ -1615,7 +1620,7 @@
   "resolved" "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   "version" "1.0.2"
 
-"vite@^4.3.2":
+"vite@^4", "vite@^4.3.2":
   "integrity" "sha512-uYB8PwN7hbMrf4j1xzGDk/lqjsZvCDbt/JC5dyfxc19Pg8kRm14LinK/uq+HSLNswZEoKmweGdtpbnxRtrAXiQ=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-4.3.8.tgz"
   "version" "4.3.8"

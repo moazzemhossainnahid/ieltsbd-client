@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import useInstructors from '../../../Hooks/useInstructors';
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const InstructorDetails = () => {
 
@@ -11,6 +12,26 @@ const InstructorDetails = () => {
     const instructor = instructors && instructors?.find(ins => ins?._id === id);
 
     // console.log(instructor);
+
+    const handleHire = () => {
+        Swal.fire({
+            title: 'Are you sure ?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Confirm to Hire!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Hired!',
+                    'Hire request sent Successfully.',
+                    'success'
+                )
+            }
+        })
+    }
 
     return (
         <div>
@@ -63,7 +84,11 @@ const InstructorDetails = () => {
 
                     </div>
                     <div class="divider"></div>
-
+                    <div className="py-10">
+                        <div className="w-full flex justify-center ">
+                            <button onClick={handleHire} className="btn btn-outline btn-primary hover:text-white px-7 capitalize py-2 rounded">Click to Hire</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="rounded shadow-md h-full md:col-span-2 p-5 md:p-8">
@@ -76,26 +101,26 @@ const InstructorDetails = () => {
                         </p>
                     </div>
                     <div class="divider"></div>
-                    <div className="mb-5">
+                    <div className="mb-3">
                         <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
                             Qualifications
                         </h3>
                         <div>
                             {instructor?.education && instructor?.education?.map((e, idx) => (
                                 <div key={idx} className="">
-                                    <h3 className="text-3xl font-bold tracking-widest text-gray-600">{e?.title}</h3>
+                                    <h3 className="text-2xl font-bold tracking-widest text-gray-600">{e?.title}</h3>
                                     <p className="text-justify font-medium italic text-gray-400 text-base mb-3">{e?.shortTitle}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div class="divider"></div>
-                    <div className="mb-5">
+                    <div className="mb-3">
                         <h3 className="font-medium text-3xl text-center md:text-left mb-5 text-primary opacity-80">
                             Others Informations
                         </h3>
                         <div className="w-full flex flex-col gap-3">
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                                 <h3 className="text-2xl font-semibold text-gray-700">Sex: <span className="pl-2 font-normal text-xl">{instructor?.gender}</span></h3>
                                 <h3 className="text-2xl font-semibold text-gray-700">Profession Level: <span className="pl-2 font-normal text-xl">{instructor?.professionLevel}</span></h3>
                                 <h3 className="text-2xl font-semibold text-gray-700">Teching Experience: <span className="pl-2 font-normal text-xl">{instructor?.totalTechingExp} yrs.</span></h3>
@@ -112,12 +137,16 @@ const InstructorDetails = () => {
                             Social Connectivity
                         </h3>
                         <div className="flex item-center justify-left md:justify-start">
-                            
-                            <div className="mr-10 space-y-4">
-                                <a href={instructor?.social_link?.facebook} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaFacebook className='text-blue-600' /> Facebook</a>
-                                <a href={instructor?.social_link?.twitter} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaTwitter className='text-sky-600' /> Twitter</a>
-                                <a href={instructor?.social_link?.pinterest} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaPinterest className='text-red-600' /> Pinterest</a>
-                                <a href={instructor?.social_link?.instagram} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaInstagram className='text-red-800' /> Instagram</a>
+
+                            <div className="flex flex-col md:flex-row item-center justify-left gap-3 w-full mr-10 space-y-4">
+                                <div className="w-full md:w-3/6">
+                                    <a href={instructor?.social_link?.facebook} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaFacebook className='text-blue-600' /> Facebook</a>
+                                    <a href={instructor?.social_link?.twitter} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaTwitter className='text-sky-600' /> Twitter</a>
+                                </div>
+                                <div className="w-full md:w-3/6">
+                                    <a href={instructor?.social_link?.pinterest} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaPinterest className='text-red-600' /> Pinterest</a>
+                                    <a href={instructor?.social_link?.instagram} target='_blank' className="flex gap-2 items-center text-justify font-medium text-base mb-3"><FaInstagram className='text-red-800' /> Instagram</a>
+                                </div>
                             </div>
 
                         </div>
