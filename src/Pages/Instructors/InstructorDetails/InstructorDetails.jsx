@@ -8,7 +8,7 @@ const InstructorDetails = () => {
     const { id } = useParams();
     const instructors = useInstructors();
 
-    const instructor = instructors && instructors?.find(ins => ins?._id === Number(id));
+    const instructor = instructors && instructors?.find(ins => ins?._id === id);
 
     // console.log(instructor);
 
