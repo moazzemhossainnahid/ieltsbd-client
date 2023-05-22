@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className='w-full'>
             <div className="w-full">
-                <Slider className="h-[65vh] md:h-[85vh] relative text-left w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
+                <Slider className="h-[65vh] md:h-[85vh] relative z-50 text-left w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
                     {
                         SliderData?.map((data, idx) => {
                             return (
