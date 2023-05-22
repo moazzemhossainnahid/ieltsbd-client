@@ -3,10 +3,44 @@ import { useForm } from "react-hook-form";
 import svg1 from "../../../assets/svg1.png";
 import svg2 from "../../../assets/svg2.png";
 import svg3 from "../../../assets/svg3.png";
+import Swal from "sweetalert2";
 
 const BecomeInstructor = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+
+  const onSubmit = async (data) => {
+    const applicationData = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      description: data.description,
+    };
+
+    console.log(data);
+    console.log("from data", applicationData);
+
+    await fetch(`http://localhost:5000/api/v1/beinstructor`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(applicationData)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === "Successful") {
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Data Addeded Successfully.',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      })
+
+  };
+
+
   return (
     <div className=" w-full mx-auto py-20 text-slate-800 mb-20 p-5 ">
       <div className="text-center mb-20">
@@ -142,7 +176,7 @@ const BecomeInstructor = () => {
               <input
                 className=" block w-full h-10 pl-2 border-2 border-[#d8dada] my-5"
                 type="text"
-                {...register("instructorName")}
+                {...register("name")}
                 name="name"
                 id=""
                 placeholder="Your Name"
@@ -159,9 +193,9 @@ const BecomeInstructor = () => {
 
               <input
                 className=" block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5"
-                type="number"
-                {...register("phoneNumber")}
-                name="phoneNumber"
+                type="text"
+                {...register("phone")}
+                name="phone"
                 id=""
                 placeholder="Phone Number"
               />
@@ -169,14 +203,14 @@ const BecomeInstructor = () => {
               <textarea
                 className=" block w-full h-32 pl-2 border-2 border-[#d8dada] mb-5"
                 type="text"
-                {...register("dec")}
-                name="dec"
+                {...register("description")}
+                name="description"
                 id=""
                 placeholder="Professional Experiences"
               />
 
               <input
-                className=" block h-10 px-7 bg-[#015abd] text-white uppercase my-4"
+                className=" block h-10 px-7 cursor-pointer bg-[#015abd] text-white uppercase my-4"
                 type="submit"
                 value="Send now"
               />
