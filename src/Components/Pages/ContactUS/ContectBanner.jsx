@@ -53,7 +53,7 @@ const ContectBanner = () => {
         // console.log(contactData);
         // console.log("from data", contactData);
 
-        await fetch(`http://localhost:5000/api/v1/contacts`, {
+        await fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/contacts`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(contactData)

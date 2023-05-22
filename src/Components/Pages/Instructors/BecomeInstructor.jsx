@@ -20,7 +20,7 @@ const BecomeInstructor = () => {
     // console.log(data);
     // console.log("from data", applicationData);
 
-    await fetch(`http://localhost:5000/api/v1/beinstructor`, {
+    await fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/beinstructor`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(applicationData)
