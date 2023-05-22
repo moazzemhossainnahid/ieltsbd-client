@@ -17,8 +17,8 @@ const BecomeInstructor = () => {
       description: data.description,
     };
 
-    console.log(data);
-    console.log("from data", applicationData);
+    // console.log(data);
+    // console.log("from data", applicationData);
 
     await fetch(`http://localhost:5000/api/v1/beinstructor`, {
       method: 'POST',
