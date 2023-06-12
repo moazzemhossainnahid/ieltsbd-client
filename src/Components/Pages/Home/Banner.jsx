@@ -6,9 +6,9 @@ import { BannnerCardData, SliderData } from '../../../assets/Data/SliderData';
 
 const Banner = () => {
     return (
-        <div className='w-full'>
-            <div className="w-full relative">
-                <Slider className="h-[65vh] md:h-[85vh] relative text-left w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
+        <div className='w-full max-w-full sticky overflow-hidden'>
+            <div className="w-full overflow-hidden">
+                <Slider className="h-[65vh] md:h-[85vh] max-w-full text-left w-full" autoplay='true' duration="5000" previousButton="" nextButton="">
                     {
                         SliderData?.map((data, idx) => {
                             return (

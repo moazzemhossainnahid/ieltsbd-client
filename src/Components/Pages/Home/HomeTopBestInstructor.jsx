@@ -7,7 +7,7 @@ const HomeTopBestInstructor = () => {
     const instructors = useInstructors();
     const navigate = useNavigate();
     return (
-        <div className='container w-full mx-auto'>
+        <div className='container w-full max-w-full mx-auto'>
             <div className="text-center py-10">
                 <div>
                     <h1 className="te mb-5 text-4xl md:text-5xl font-bold">

@@ -6,7 +6,7 @@ import HomeTopBestInstructor from '../../Components/Pages/Home/HomeTopBestInstru
 
 const Home = () => {
     return (
-        <div className='w-full overflow-x-hidden'>
+        <div className='w-full max-w-full overflow-hidden'>
              <Banner/>
              <HomeTopBestInstructor/>
              <UpcomingEvent/>
