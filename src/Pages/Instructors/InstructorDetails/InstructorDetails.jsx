@@ -3,17 +3,36 @@ import { useParams } from 'react-router-dom';
 import useInstructors from '../../../Hooks/useInstructors';
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../firebase.init';
 
 const InstructorDetails = () => {
-
+const [user] = useAuthState(auth);
     const { id } = useParams();
     const instructors = useInstructors();
 
     const instructor = instructors && instructors?.find(ins => ins?._id === id);
 
-    // console.log(instructor);
+    console.log(instructor);
 
     const handleHire = () => {
+
+        const info = {
+            usersName:user?.displayName,
+            usersEmail:user?.email,
+            instructorName:instructor?.name,
+            instructorEmail:instructor?.email,
+            instructorPhone:instructor?.phone,
+            instructorAddress:instructor?.address,
+            instructorImage:instructor?.img,
+            instructorGender:instructor?.gender,
+            instructorSpeciality:instructor?.specialist,
+            instructorLevel:instructor?.professionLevel,
+
+        }
+
+        console.log(info);
+
         Swal.fire({
             title: 'Are you sure ?',
             text: "You won't be able to revert this!",
@@ -24,11 +43,29 @@ const InstructorDetails = () => {
             confirmButtonText: 'Yes, Confirm to Hire!'
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire(
-                    'Hired!',
-                    'Hire request sent Successfully.',
-                    'success'
-                )
+
+             fetch(`http://localhost:5000/api/v1/hires`, {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(info)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.status === "Successful") {
+                            Swal.fire({
+                                position: 'top-center',
+                                icon: 'success',
+                                title: 'Hire request sent Successfully.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
+                // Swal.fire(
+                //     'Hired!',
+                //     'Hire request sent Successfully.',
+                //     'success'
+                // )
             }
         })
     }
