@@ -44,7 +44,7 @@ const [user] = useAuthState(auth);
         }).then((result) => {
             if (result.isConfirmed) {
 
-             fetch(`http://localhost:5000/api/v1/hires`, {
+             fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/hires`, {
                     method: 'POST',
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(info)
