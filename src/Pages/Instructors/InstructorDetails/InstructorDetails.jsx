@@ -1,39 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useInstructors from '../../../Hooks/useInstructors';
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const InstructorDetails = () => {
-const [user] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const { id } = useParams();
     const instructors = useInstructors();
+    const [pending, setPending] = useState(false);
 
     const instructor = instructors && instructors?.find(ins => ins?._id === id);
 
     console.log(instructor);
 
-    const handleHire = () => {
+    const handleHire = async () => {
 
         const info = {
-            usersName:user?.displayName,
-            usersEmail:user?.email,
-            instructorName:instructor?.name,
-            instructorEmail:instructor?.email,
-            instructorPhone:instructor?.phone,
-            instructorAddress:instructor?.address,
-            instructorImage:instructor?.img,
-            instructorGender:instructor?.gender,
-            instructorSpeciality:instructor?.specialist,
-            instructorLevel:instructor?.professionLevel,
+            usersName: user?.displayName,
+            usersEmail: user?.email,
+            instructorName: instructor?.name,
+            instructorEmail: instructor?.email,
+            instructorPhone: instructor?.phone,
+            instructorAddress: instructor?.address,
+            instructorImage: instructor?.img,
+            instructorGender: instructor?.gender,
+            instructorSpeciality: instructor?.specialist,
+            instructorLevel: instructor?.professionLevel,
 
         }
 
         console.log(info);
+        setPending(true);
 
-        Swal.fire({
+        await Swal.fire({
             title: 'Are you sure ?',
             text: "You won't be able to revert this!",
             icon: 'warning',
@@ -44,7 +48,7 @@ const [user] = useAuthState(auth);
         }).then((result) => {
             if (result.isConfirmed) {
 
-             fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/hires`, {
+                fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/hires`, {
                     method: 'POST',
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(info)
@@ -66,6 +70,30 @@ const [user] = useAuthState(auth);
                 //     'Hire request sent Successfully.',
                 //     'success'
                 // )
+
+                const data = {
+                    customername: user?.displayName,
+                    customeremail: user?.email,
+                    teachername: instructor?.name,
+                    teachercontact: instructor?.phone,
+                    teacheremail: instructor?.email
+                }
+
+                console.log(data);
+
+                emailjs.send('service_1aa3pii', 'template_iak88vo', data, 'bCPM2LiwICYH7hf3G')
+                    .then((result) => {
+                        console.log(result);
+                        if (result?.text) {
+                            toast.success("Successfully Send an Email!");
+                            setPending(false);
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error sending email:', error);
+                        swal("OPPSS...", "Email not Send!", "error");
+                        setPending(false);
+                    });
             }
         })
     }
@@ -123,7 +151,7 @@ const [user] = useAuthState(auth);
                     <div class="divider"></div>
                     <div className="py-10">
                         <div className="w-full flex justify-center ">
-                            <button onClick={handleHire} className="btn btn-outline btn-primary hover:text-white px-7 capitalize py-2 rounded">Click to Hire</button>
+                            <button disabled={pending ? true : false} onClick={handleHire} className="btn btn-outline btn-primary hover:text-white px-7 capitalize py-2 rounded">Click to Hire</button>
                         </div>
                     </div>
                 </div>
