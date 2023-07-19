@@ -1,12 +1,45 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../../firebase.init';
+
 
 const UPEventDetails = ({ course }) => {
+    const [user] = useAuthState(auth);
+
+
+    const handleBookingEvent = () => {
+
+        if (user) {
+            const data = {
+                user_email: user?.email,
+
+            }
+
+
+            emailjs.send('service_2189kr6', 'template_5q1zq8n', data, 'sDb6ZwajIzszyrQFC')
+                .then((result) => {
+                    // console.log(result);
+                    if (result?.text) {
+                        toast.success("Event Book Successfull", "You Gate an Email!", "success");
+                        // reset();
+                    }
+                }, (error) => {
+                    swal("OPPSS...", "Email not Send!", "error");
+                });
+        }else{
+            swal("OPPSS...", "Please Login for Book Events", "error");
+        }
+    };
+
+
     return (
-        <div className='group cursor-pointer hover:transition overflow-hidden'>
+        <div onClick={handleBookingEvent} className='group cursor-pointer hover:transition overflow-hidden'>
             <div>
                 <img className=' group-hover:-translate-y-1 group-hover:scale-110  group-hover:duration-1000 group-hover:ease-in-out group-hover:delay-200' src={course.img} alt="" />
             </div>
- 
+
             <div className=' flex justify-center items-center gap-5 p-5 border-b-8 border-[#0067DA]   group-hover:duration-1000 group-hover:ease-in-out group-hover:bg-[#0067DA] mt-2 h-[150px] '>
 
                 <div className=' text-[#0067DA] font-bold group-hover:text-white'>
@@ -16,8 +49,7 @@ const UPEventDetails = ({ course }) => {
                 <div className='text-[#192f59] border-l-2 border-[#0067DA] group-hover:border-white pl-3 group-hover:text-white'>
                     <h2 className=' text-md font-semibold pb-2'>{course.name}</h2>
                     <p className='text-xs'>{course.description}</p>
-                </div>  
-
+                </div>
                 <div></div>
             </div>
         </div>
