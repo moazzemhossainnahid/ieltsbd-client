@@ -4,9 +4,11 @@ import svg1 from "../../../assets/svg1.png";
 import svg2 from "../../../assets/svg2.png";
 import svg3 from "../../../assets/svg3.png";
 import Swal from "sweetalert2";
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const BecomeInstructor = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
 
   const onSubmit = async (data) => {
@@ -16,6 +18,9 @@ const BecomeInstructor = () => {
       phone: data.phone,
       description: data.description,
     };
+
+    const tutorData = { tutor_name: data.name, tutor_email: data.email, };
+
 
     // console.log(data);
     // console.log("from data", applicationData);
@@ -34,7 +39,18 @@ const BecomeInstructor = () => {
             title: 'Data Addeded Successfully.',
             showConfirmButton: false,
             timer: 1500
-          })
+          });
+
+          emailjs.send('service_455fda9', 'template_3stcyhp', tutorData, '3pIHOGeyDxPKiRw9A')
+            .then((result) => {
+              // console.log(result);
+              if (result?.text) {
+                // toast.success("Successfull", "You Send an Email!", "success");
+                reset();
+              }
+            }, (error) => {
+              swal("OPPSS...", "Email not Send!", "error");
+            });
         }
       })
 

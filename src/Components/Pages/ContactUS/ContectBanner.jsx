@@ -67,7 +67,22 @@ const ContectBanner = () => {
                         title: 'Data Addeded Successfully.',
                         showConfirmButton: false,
                         timer: 1500
-                    })
+                    });
+
+                    const data = { contact_email: e.target.email.value };
+
+                    emailjs.send('service_455fda9', 'template_kxqc45l', data, '3pIHOGeyDxPKiRw9A')
+                        .then((result) => {
+                            // console.log(result);
+                            if (result?.text) {
+                                // toast.success("Successfull", "You Send an Email!", "success");
+                                e.target.reset();
+                                setPending(false);
+                            }
+                        }, (error) => {
+                            swal("OPPSS...", "Email not Send!", "error");
+                            setPending(false);
+                        });
                 }
             })
 
