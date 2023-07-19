@@ -94,6 +94,21 @@ const InstructorDetails = () => {
                         swal("OPPSS...", "Email not Send!", "error");
                         setPending(false);
                     });
+
+
+                emailjs.send('service_2189kr6', 'template_k4e4anj', data, 'sDb6ZwajIzszyrQFC')
+                    .then((result) => {
+                        console.log(result);
+                        if (result?.text) {
+                            // toast.success("Successfully Send an Email!");
+                            setPending(false);
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error sending email:', error);
+                        swal("OPPSS...", "Email not Send!", "error");
+                        setPending(false);
+                    });
             }
         })
     }
