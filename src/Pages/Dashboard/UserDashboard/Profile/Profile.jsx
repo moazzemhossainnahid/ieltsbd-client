@@ -36,7 +36,7 @@ const Profile = () => {
                     }
 
                     // send to database
-                    fetch(`https://ieltsbd-server-production.up.railway.app/users/${email}`, {
+                    fetch(`https://ieltsbd-server.vercel.app/users/${email}`, {
                         method: 'PUT',
                         headers: {
                             "content-type": "application/json",

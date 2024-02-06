@@ -48,7 +48,7 @@ const InstructorDetails = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/hires`, {
+                fetch(`https://ieltsbd-server.vercel.app/api/v1/hires`, {
                     method: 'POST',
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(info)

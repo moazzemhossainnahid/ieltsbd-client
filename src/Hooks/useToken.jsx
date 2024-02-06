@@ -17,7 +17,7 @@ const UseToken = () => {
 
 
         if(email){
-            fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/users/${email}`, {
+            fetch(`https://ieltsbd-server.vercel.app/api/v1/users/${email}`, {
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(currentUser)

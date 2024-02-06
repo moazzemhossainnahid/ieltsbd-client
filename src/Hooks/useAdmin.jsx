@@ -10,7 +10,7 @@ const UseAdmin = () => {
 //   console.log(admin);
     useEffect( () => { 
         const email = user?.email; 
-        fetch(`https://ieltsbd-server-production.up.railway.app/api/v1/users/isAdmin/${email}`, {
+        fetch(`https://ieltsbd-server.vercel.app/api/v1/users/isAdmin/${email}`, {
             method: 'GET',
             headers: {
                 'content-type' : 'application/json',
